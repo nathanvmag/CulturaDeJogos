@@ -1,0 +1,1577 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game Events</name>
+    <events>
+        <variable constant="0" name="Cronometro" sid="403776025400085" static="0" type="number">0</variable>
+        <variable constant="0" name="teste" sid="7437303972913521" static="0" type="number">0</variable>
+        <variable constant="0" name="Ondas" sid="571531273011220" static="0" type="number">0</variable>
+        <variable constant="0" name="Tempo" sid="2576368006156491" static="0" type="number">0</variable>
+        <variable constant="0" name="Viu" sid="2775395261861929" static="0" type="number">0</variable>
+        <event-block sid="4443768745263301">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6509208287559179" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3453523264641969" type="Pivete1">
+                    <param id="0" name="Instance variable">initialX</param>
+                    <param id="1" name="Value">Pivete1.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="5764544106235317" type="Pivete1">
+                    <param id="0" name="Instance variable">initialY</param>
+                    <param id="1" name="Value">Pivete1.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="3945279953447704" type="Pivete2">
+                    <param id="0" name="Instance variable">InitialX</param>
+                    <param id="1" name="Value">Pivete2.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="9602048605821304" type="Pivete2">
+                    <param id="0" name="Instance variable">InitialY</param>
+                    <param id="1" name="Value">Pivete2.Y</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4411561694338115" type="Pivete1">
+                    <param id="0" name="Object">Reached</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="610132926463594" type="Pivete2">
+                    <param id="0" name="Object">Reached</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="3184438165659282" type="System">
+                    <param id="0" name="Variable">Tempo</param>
+                    <param id="1" name="Value">300</param>
+                </action>
+                <action id="-9" name="Set value" sid="6980982551624235" type="System">
+                    <param id="0" name="Variable">Viu</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="542857169264520" type="Pause">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="424223012593368" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="920026496575698" type="Menu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="264745254626836" type="Restart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="473321955340402" type="Menu">
+                    <param id="0" name="Width">00</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="117586351028514" type="Restart">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="766629854600752" type="StaminaBar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="9334088566058909" type="BT_Som">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9173558567031874" type="BT_Som">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-20" name="Set layout scale" sid="116974564941339" type="System">
+                    <param id="0" name="Scale">lerp(LayoutScale,1,0.1)</param>
+                </action>
+                <action id="-9" name="Set value" sid="112553337828720" type="System">
+                    <param id="0" name="Variable">Cronometro</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set item" sid="140538433928246" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Score&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="5" name="Check item exists" sid="351143759853557" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="560183557245538" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5460832628333745">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1231928463539222" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3433454389497743">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="5619754883447848" type="Pause" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6468689014588561" type="Pause">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="6311319818515261" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4709967626619624" type="Menu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4112528195648177" type="Restart">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="188545574358874" type="Menu">
+                            <param id="0" name="Width">130</param>
+                            <param id="1" name="Height">130</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="744242311599453" type="Restart">
+                            <param id="0" name="Width">130</param>
+                            <param id="1" name="Height">130</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="744510579279100" type="StaminaBar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="4850237949291593" type="BT_Som">
+                            <param id="0" name="Width">59</param>
+                            <param id="1" name="Height">56</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4433197044804866" type="BT_Som">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="294473473751024" type="System">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3651662446567278">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4982697133401104" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7317359293977413" type="Pause">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="9118523107007606" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5301298098842363" type="Menu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3963296333144469" type="Restart">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="854868176972096" type="Menu">
+                            <param id="0" name="Width">00</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="456657776344809" type="Restart">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="818103280979796" type="StaminaBar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="4697561559041444" type="BT_Som">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5594392427226027" type="BT_Som">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="529174378151645" type="System">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8137363956925514">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="581647607547512" type="Keyboard">
+                    <param id="0" name="Key">77 (M)</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="727880486049614" type="Pause" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="896205866019321" type="Pause">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="868387309627174" type="Menu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="140164735151419" type="Restart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="570032411213597" type="Menu">
+                    <param id="0" name="Width">00</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="821299737956043" type="Restart">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="453806052086624" type="StaminaBar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="312258920533638" type="BT_Som">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="949393754405535" type="BT_Som">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="5240111641448114" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="6387307747964182" type="FadeGame">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="7400157751643994" type="FadeGame" />
+                <action id="-16" name="Wait" sid="6287210967650801" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7167675201960048" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="33" name="Stop all" sid="228653561877448" type="Audio" />
+                <action id="0" name="Play" sid="1415723359329888" type="Audio">
+                    <param id="0" name="Audio file">Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">40</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8652195918576853">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5391091438554057" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="988530589212585" type="Pause" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="945727783683855" type="Pause">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="438154102647243" type="Menu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="556589114320333" type="Restart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="626599927776439" type="Menu">
+                    <param id="0" name="Width">00</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="763660294693347" type="Restart">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="739712166363962" type="StaminaBar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="351019618022181" type="BT_Som">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="515291914553779" type="BT_Som">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="7240191933951446" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="1461552501534465" type="FadeGame">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="3513833503647258" type="FadeGame" />
+                <action id="-16" name="Wait" sid="1435724389915288" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="887214644956427" type="System" />
+                <action id="33" name="Stop all" sid="8637443132734747" type="Audio" />
+                <action id="0" name="Play" sid="3111317575872505" type="Audio">
+                    <param id="0" name="Audio file">Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">40</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="582494911719209">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="197954511471552" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="1292543232903699" type="Onda">
+                    <param id="0" name="Y">Onda.Y+(Onda.speed*dt)</param>
+                </action>
+                <action id="0" name="Set text" sid="952279978666553" type="Tempo">
+                    <param id="0" name="Text">&quot;Segundos: &quot; &amp; Cronometro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="2274897009997427">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="4566983683102997" type="Onda">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">2888</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6753532360305931" type="Onda">
+                    <param id="0" name="Instance variable">speed</param>
+                    <param id="1" name="Value">-10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7474967674634959">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="7082162304636902" type="Onda">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">2860</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9852964344722574" type="Onda">
+                    <param id="0" name="Instance variable">speed</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5806146097053052">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2848034557441122" type="Keyboard">
+                    <param id="0" name="Key">86 (V)</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="297405945906021" type="Pause" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6118748017391802">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="6536316327085184" type="BT_Som">
+                            <param id="0" name="Animation">&quot;Sound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8944221984417498" type="BT_Som">
+                            <param id="0" name="Animation">&quot;Mute&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="6119769300411222" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1519543606488496">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5240597126700134" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1910424199563885" type="BT_Som">
+                            <param id="0" name="Animation">&quot;Sound&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="7301920778144863" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="256185570794190">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="341348055497845" type="Sprite14">
+                    <param id="0" name="Object">figuranteplace1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="977539643441221" type="Sprite14">
+                    <param id="0" name="X">figuranteplace2.X</param>
+                    <param id="1" name="Y">figuranteplace2.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="780352831621449">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="160943303132881" type="Sprite14">
+                    <param id="0" name="Object">figuranteplace2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="653900769861273" type="Sprite14">
+                    <param id="0" name="X">figuranteplace1.X</param>
+                    <param id="1" name="Y">figuranteplace1.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="923655605118753">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="177487966305709" type="Sprite15">
+                    <param id="0" name="Object">figplace2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="819166615642580" type="Sprite15">
+                    <param id="0" name="X">figplace3.X</param>
+                    <param id="1" name="Y">figplace3.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="208486837082053">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="245676893160262" type="Sprite15">
+                    <param id="0" name="Object">figplace3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="857665551673980" type="Sprite15">
+                    <param id="0" name="X">figplace2.X</param>
+                    <param id="1" name="Y">figplace2.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="730157769244139" title="Player">
+            <sub-events>
+                <event-block sid="3361447646720065">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="8710916808750611" type="Player">
+                            <param id="0" name="Object">Lixeira</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="402066874017770">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3949977785510669" type="Player">
+                                    <param id="0" name="Instance variable">Escondido</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2631346498086073">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="5338009402239932" type="Keyboard">
+                                            <param id="0" name="Key">88 (X)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="1696065275700271" type="Player">
+                                            <param id="0" name="Instance variable">Escondido</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Turret" id="2" name="Clear targets" sid="9408813543196548" type="Pivete1" />
+                                        <action behavior="Turret" id="2" name="Clear targets" sid="5376151409058304" type="Pivete2" />
+                                        <action id="-15" name="Set visible" sid="9949031529801174" type="Player">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action behavior="8Direction" id="8" name="Set enabled" sid="3488808980018531" type="Player">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="3822259711787705" type="Player">
+                                            <param id="0" name="Instance variable">EscondidoTime</param>
+                                            <param id="1" name="Value">dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="409905930250410">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="623233881172805" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="351207047172810" type="Player">
+                                    <param id="0" name="Instance variable">Escondido</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="731283817264296">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="2437636279948569" type="Keyboard">
+                                            <param id="0" name="Key">88 (X)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="245640535476547" type="Player">
+                                            <param id="0" name="Instance variable">EscondidoTime</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0.4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="234420917206727" type="Player">
+                                            <param id="0" name="Instance variable">Escondido</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="790940352985603" type="Player">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="8Direction" id="8" name="Set enabled" sid="367804635313794" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="490709244003183" type="Player">
+                                            <param id="0" name="Instance variable">EscondidoTime</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="592284263500336" type="Lixeira">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9781474663912268">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="96898475422517" type="Player">
+                            <param id="0" name="Instance variable">Escondido</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="6976975054052123" type="Player">
+                            <param id="0" name="Instance variable">EscondidoTime</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7373193985391495">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="4164214813149234" type="Player">
+                            <param id="0" name="Object">Lixeira</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1088859813868415" type="Player">
+                            <param id="0" name="Instance variable">Escondido</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8622609104620497" type="Lixeira">
+                            <param id="0" name="Animation">&quot;Shaking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="335740772299216">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="762436023032392" type="Player">
+                            <param id="0" name="Object">Onda</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="433509892342534">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="177349960909802" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="370107104290292" type="Player">
+                                    <param id="0" name="Max Speed">150</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="242894489102973">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="675200444504597" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="597726192846816" type="Player">
+                                    <param id="0" name="Max Speed">75</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="634973921869430">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="731502335016367" type="System" />
+                        <condition id="2" inverted="1" name="Key is down" sid="765200776374970" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="806443488044782" type="Player">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8191122370840711">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="7498143216450501" type="Player">
+                            <param id="0" name="Object">Chuveiro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7521943059566628" type="Chuveiro">
+                            <param id="0" name="Animation">&quot;Chuva&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5751563184387279">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="200019565114817" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="266886437031942" type="Chuveiro">
+                            <param id="0" name="Animation">&quot;Parado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="215909632528640">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="525188377059725" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="264982139618832">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="880060409283976" type="Player">
+                                    <param id="0" name="Object">Onda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set rate" sid="495999072179253" type="AguaParticle">
+                                    <param id="0" name="Rate">10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="161369996252203" type="AguaParticle">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                                <action id="-21" name="Rotate toward position" sid="416712300506789" type="AguaParticle">
+                                    <param id="0" name="Degrees">0</param>
+                                    <param id="1" name="X">Player.X</param>
+                                    <param id="2" name="Y">Player.Y</param>
+                                </action>
+                                <action id="1" name="Set rate" sid="707511961601192" type="AreiaParticle">
+                                    <param id="0" name="Rate">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="775628174650230" type="AreiaParticle">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="518063978453463">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="970144123100292" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set rate" sid="242704003748607" type="AreiaParticle">
+                                    <param id="0" name="Rate">10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="740725904142232" type="AreiaParticle">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                                <action id="-21" name="Rotate toward position" sid="802818265234581" type="AreiaParticle">
+                                    <param id="0" name="Degrees">0</param>
+                                    <param id="1" name="X">Player.X</param>
+                                    <param id="2" name="Y">Player.Y</param>
+                                </action>
+                                <action id="1" name="Set rate" sid="279245810593415" type="AguaParticle">
+                                    <param id="0" name="Rate">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="918329176660057" type="AguaParticle">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="977369065163697">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="153138551475892" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set rate" sid="607804027608191" type="AreiaParticle">
+                            <param id="0" name="Rate">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="278799940989552" type="AreiaParticle">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                        <action id="1" name="Set rate" sid="482507866102152" type="AguaParticle">
+                            <param id="0" name="Rate">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="741631838698137" type="AguaParticle">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6894888527258076">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="122209805239378" type="System" />
+                        <condition id="1" name="Is overlapping another object" sid="1040494925465154" type="Player">
+                            <param id="0" name="Object">Zones</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Scroll to position" sid="6427053606959703" type="System">
+                            <param id="0" name="X">lerp(scrollx,(clamp(Player.X,Zones.X+(400),Zones.X+Zones.Width-(400))),0.1*60*dt)</param>
+                            <param id="1" name="Y">lerp(scrolly,(clamp(Player.Y,Zones.Y+(240),Zones.Y+Zones.Height-(240))),0.1*60*dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7455059821231362">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="3051100925766091" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="5831976842799761" type="Player">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="7394360205286452" type="Player">
+                            <param id="0" name="Speed">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5498173672318341">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1244598105923845" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1545335686273705" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="267516069026129" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="7956185266989958" type="Player">
+                            <param id="0" name="Max Speed">500</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="2662012823612827" type="Player">
+                            <param id="0" name="Speed">10</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="3794018592224873" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Value">20*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3734499805548833">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="8360732142738792" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="161467131505752" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6207465036971892" type="Player">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3636487587038146">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="904269668376585" type="Player">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4609217892323701" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8898199308205312">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6668740200137839" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="494461528018645" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="342684224809677" type="Player">
+                            <param id="0" name="Animation">&quot;walkingTired&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="3006763799262952" type="Player">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                        <action disabled="1" id="6" name="Set speed" sid="6025576901970972" type="Player">
+                            <param id="0" name="Speed">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6037916113992232">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="4819357294985006" type="System" />
+                        <condition id="12" name="Compare speed" sid="9545852324245042" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Number">9</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7781736315898554" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="9047087430505521" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Value">3*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8038307660642585">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="4241592443256307" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="9063176881974585" type="StaminaBar">
+                            <param id="0" name="Width">((24* Player.Stamina )/100 ) +40</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="6749897360559628" type="StaminaBar">
+                            <param id="0" name="Height">((24*Player.Stamina)/100) +40</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9727383367260984">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7889615663208586" type="System">
+                                    <param id="0" name="Variable">Tempo</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="1044209246873075" type="System">
+                                    <param id="0" name="Variable">Tempo</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9858100331931933">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8688493205259578" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">70</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6169637629105959" type="StaminaBar">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1291618036594988">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3534741134438832" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">70</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1482023154894923" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="5839987073897089" type="StaminaBar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="4213897727909188" type="Audio">
+                            <param id="0" name="Tag">&quot;Respirando&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8352841311386372">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3527747068170773" type="Player">
+                            <param id="0" name="Instance variable">Stamina</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="1829805161553517" type="StaminaBar">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="300232720363967">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="8212592245361876" type="Audio">
+                                    <param id="0" name="Tag">&quot;Respirando&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="7861362006269759" type="Audio">
+                                    <param id="0" name="Audio file">RespirandoDificil</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Respirando&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="284928466183218" title="Pivetes">
+            <sub-events>
+                <event-block disabled="1" sid="9703103406652396">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="1515865925702261" type="Pivete1">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3954271377899466" type="Player">
+                            <param id="0" name="Instance variable">Escondido</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="5" name="Set enabled" sid="8379523416586319" type="Pivete1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="1611362535110544" type="Pivete1">
+                            <param id="0" name="Target">Player</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="3499585141457099" type="Pivete1">
+                            <param id="0" name="Instance variable">ViewTime</param>
+                            <param id="1" name="Value">1*dt</param>
+                        </action>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="8491458550708792" type="Pivete1">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="10" name="Set rotate speed" sid="4345169346560741" type="Pivete1">
+                            <param id="0" name="Rotate speed">135</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3218535499982218" type="Pivete1">
+                            <param id="0" name="Instance variable">Rodou</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8500864320266174" type="Pivete1">
+                            <param id="0" name="Instance variable">randangle</param>
+                            <param id="1" name="Value">random(0,360)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="3316113125080383">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="2709910551654601" type="Pivete1">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2292950096860169" type="Pivete1">
+                                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="82043929302722">
+                    <conditions>
+                        <condition behavior="Turret" disabled="1" id="0" inverted="1" name="Has target" sid="6992795836527469" type="Pivete1" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="7600731616527945" type="Pivete1">
+                            <param id="0" name="Object">Reached</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8391880996771101" type="Pivete1">
+                            <param id="0" name="Instance variable">ViewTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="8262024626604092" type="Pivete1">
+                            <param id="0" name="X">Pivete1.initialX</param>
+                            <param id="1" name="Y">Pivete1.initialY</param>
+                        </action>
+                        <action behavior="Pathfinding" id="10" name="Set rotate speed" sid="7919018503041661" type="Pivete1">
+                            <param id="0" name="Rotate speed">0</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="4707977647320045" type="Pivete1">
+                            <param id="0" name="X">Pivete1.initialX</param>
+                            <param id="1" name="Y">Pivete1.initialY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="3680686601196075">
+                    <conditions>
+                        <condition disabled="1" id="-14" name="Compare variable" sid="6767361512613266" type="System">
+                            <param id="0" name="Variable">Tempo</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="488758580680500">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="404692166256515" type="Player">
+                                    <param id="0" name="Instance variable">Escondido</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9950861137611906" type="Pivete1">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="434249279427181" type="Pivete1">
+                                    <param id="0" name="Set">0</param>
+                                </action>
+                                <action behavior="Turret" id="5" name="Set enabled" sid="252147039678322" type="Pivete1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="139714202435236" type="Pivete1">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="475854778178760" type="Pivete1">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="692887585425089">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="235983093286212" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="743544133020758" type="Pivete1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="698601562351176" type="Pivete1">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7934513947014604">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="4879657544322677" type="Pivete1" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="2167285564463321" type="Pivete1" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="461431113630099">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="711012787175510" type="Pivete1">
+                                    <param id="0" name="Object">Onda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="14" name="Set speed" sid="768095134089085" type="Pivete1">
+                                    <param id="0" name="Speed">120</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="654312928042943">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="581307531708087" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="14" name="Set speed" sid="9869355654070426" type="Pivete1">
+                                    <param id="0" name="Speed">250</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4105846016192483">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="2952145290277885" type="Pivete1" />
+                        <condition id="-7" name="Compare instance variable" sid="5545475772784138" type="Pivete1">
+                            <param id="0" name="Instance variable">ViewTime</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4490288059165602" type="Pivete1">
+                            <param id="0" name="Instance variable">initialX</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">round(Player.X)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1092984164346514" type="Pivete1">
+                            <param id="0" name="Instance variable">initialY</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">round(Player.Y)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="2957950751580674" type="Pivete1">
+                            <param id="0" name="X">Pivete1.initialX</param>
+                            <param id="1" name="Y">Pivete1.initialY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9327159150203011">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2166786015881551" type="Pivete1">
+                            <param id="0" name="Instance variable">ViewTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="8080314807725391" type="Pivete1">
+                            <param id="0" name="Object">Reached</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="8163399139993029" type="System">
+                            <param id="0" name="Variable">Tempo</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="6511169178234237" type="Pivete1">
+                            <param id="0" name="Set">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9243644386644605" type="Pivete1">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Turret" id="5" name="Set enabled" sid="8558089098236176" type="Pivete1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="4498126989735205" type="Pivete1">
+                            <param id="0" name="Angle">Pivete1.randangle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9002154469245338">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="732872313471497" type="Pivete1" />
+                        <condition id="-7" name="Compare instance variable" sid="7970718142230489" type="Pivete1">
+                            <param id="0" name="Instance variable">ViewTime</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="9371406545398531" type="Pivete1">
+                            <param id="0" name="X">Pivete1.initialX</param>
+                            <param id="1" name="Y">Pivete1.initialY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8503896370588641">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="1604333971588696" type="Pivete2">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1751815779312338" type="Player">
+                            <param id="0" name="Instance variable">Escondido</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="0" name="Acquire target" sid="6286712620770591" type="Pivete2">
+                            <param id="0" name="Target">Player</param>
+                        </action>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="8403554470378026" type="Pivete2">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="912522171998818" type="Pivete2">
+                            <param id="0" name="Instance variable">RUN</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5352327693835845" type="Pivete2">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4538549750869861">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5070670975731527" type="Pivete2">
+                            <param id="0" name="Instance variable">RUN</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="5373519571625505" type="Pivete2">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="7801585859201478" type="Pivete2">
+                            <param id="0" name="Instance variable">Speedtime</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                        <action disabled="1" id="-20" name="Set layout scale" sid="231908201301929" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale,1.5,0.1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1472036819014857">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6403023158403539" type="Pivete2">
+                                    <param id="0" name="Instance variable">Speedtime</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">1.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="7" name="Set max speed" sid="5313076989025296" type="Pivete2">
+                                    <param id="0" name="Speed">300</param>
+                                </action>
+                                <action behavior="Pathfinding" id="14" name="Set speed" sid="573957659514432" type="Pivete2">
+                                    <param id="0" name="Speed">150</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4053443356326951">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8547725360216313" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="7" name="Set max speed" sid="979329960915512" type="Pivete2">
+                                    <param id="0" name="Speed">150</param>
+                                </action>
+                                <action behavior="Pathfinding" id="14" name="Set speed" sid="3737875621908356" type="Pivete2">
+                                    <param id="0" name="Speed">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="986711353664923">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="839435782938650" type="Pivete2">
+                                    <param id="0" name="Object">Onda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="7" name="Set max speed" sid="813442974040068" type="Pivete2">
+                                    <param id="0" name="Speed">150</param>
+                                </action>
+                                <action behavior="Pathfinding" id="14" name="Set speed" sid="284142816312406" type="Pivete2">
+                                    <param id="0" name="Speed">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="522294221627909">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="1456792091970298" type="Pivete2" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="3298997809935356" type="Pivete2" />
+                    </actions>
+                </event-block>
+                <event-block sid="7266853764893662">
+                    <conditions>
+                        <condition behavior="Turret" id="0" inverted="1" name="Has target" sid="2352900661228529" type="Pivete2" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="1407328179947644" type="Pivete2">
+                            <param id="0" name="X">Pivete2.InitialX</param>
+                            <param id="1" name="Y">Pivete2.InitialY</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6939448808324878" type="Pivete2">
+                            <param id="0" name="X">Pivete2.InitialX</param>
+                            <param id="1" name="Y">Pivete2.InitialY</param>
+                        </action>
+                        <action behavior="Pathfinding" id="7" name="Set max speed" sid="7556555878486345" type="Pivete2">
+                            <param id="0" name="Speed">200</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4403406628349107" type="Pivete2">
+                            <param id="0" name="Instance variable">RUN</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="285777961446359" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale,1,0.1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5773509725198466">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="601541752476885" type="Pivete2">
+                            <param id="0" name="Object">Reached</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="3200449700162253">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="106085771792218" type="Pivete2">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="583061699374771" type="Player">
+                                    <param id="0" name="Instance variable">Escondido</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="6399547486107411" type="Pivete2">
+                                    <param id="0" name="Set">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6593447402388868" type="Pivete2">
+                                    <param id="0" name="Instance variable">Speedtime</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4396395674501732" type="Pivete2">
+                                    <param id="0" name="Animation">&quot;Stop&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="496950293103208">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1453258193796078" type="Pivete1">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="1147648291406244" type="FadeGame">
+                            <param id="0" name="Fade-in time">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="1496583301044749" type="FadeGame" />
+                        <action id="-2" name="Go to layout" sid="186104371155561" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4099099053120239">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="7591237617051346" type="Pivete2">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="6964030515501093" type="FadeGame">
+                            <param id="0" name="Fade-in time">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="3174271635188335" type="FadeGame" />
+                        <action id="-2" name="Go to layout" sid="187146057662244" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="405454711242315">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="718191958235983" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="852095723918385" type="System">
+                    <param id="0" name="Variable">Cronometro</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set item" sid="137157762575605" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Score&quot;</param>
+                    <param id="1" name="Value">Cronometro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="732296095303387">
+            <conditions>
+                <condition id="1" name="On item get" sid="375743347050756" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="818223515495457" type="System">
+                    <param id="0" name="Variable">Highscore</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="910714500085037">
+            <conditions>
+                <condition id="9" name="On item exists" sid="462890162079848" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="575299773456340" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="493439148848857">
+            <conditions>
+                <condition id="10" name="On item missing" sid="932799881472128" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="304321666400689" type="System">
+                    <param id="0" name="Variable">Highscore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="355438246184851">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="163079104044121" type="System">
+                    <param id="0" name="First value">Cronometro</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">Highscore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="666663642104262" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                    <param id="1" name="Value">Cronometro</param>
+                </action>
+                <action id="-9" name="Set value" sid="409445099662631" type="System">
+                    <param id="0" name="Variable">Highscore</param>
+                    <param id="1" name="Value">Cronometro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="370902491548401">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="453497214494754" type="Player">
+                    <param id="0" name="Object">Part1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="918679444883047" type="Pivete1">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Pathfinding" id="3" name="Set enabled" sid="485504817416231" type="Pivete1">
+                    <param id="0" name="Set">0</param>
+                </action>
+                <action behavior="Turret" id="5" name="Set enabled" sid="772921078219387" type="Pivete1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="244099010629434" type="Pivete1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="309947403884628" type="Pivete1">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="633589448485333" type="Pivete7">
+                    <param id="0" name="X">Pivete7.initialX</param>
+                    <param id="1" name="Y">Pivete7.initialY</param>
+                </action>
+                <action behavior="Pathfinding" id="10" name="Set rotate speed" sid="840433528702289" type="Pivete7">
+                    <param id="0" name="Rotate speed">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="968909433808528" type="Pivete7">
+                    <param id="0" name="X">Pivete7.initialX</param>
+                    <param id="1" name="Y">Pivete7.initialY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="808174582244277">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="177966683546897" type="Player">
+                    <param id="0" name="Object">Part2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="623217907872565" type="Pivete7">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Pathfinding" id="3" name="Set enabled" sid="182936095871224" type="Pivete7">
+                    <param id="0" name="Set">0</param>
+                </action>
+                <action behavior="Turret" id="5" name="Set enabled" sid="274577032851991" type="Pivete7">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="754641356214353" type="Pivete7">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="565478833955845" type="Pivete7">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="764377176545511" type="Pivete1">
+                    <param id="0" name="X">Pivete1.initialX</param>
+                    <param id="1" name="Y">Pivete1.initialY</param>
+                </action>
+                <action behavior="Pathfinding" id="10" name="Set rotate speed" sid="840469231798490" type="Pivete1">
+                    <param id="0" name="Rotate speed">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="512892517596952" type="Pivete1">
+                    <param id="0" name="X">Pivete1.initialX</param>
+                    <param id="1" name="Y">Pivete1.initialY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="794648793372799">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="512519165320473" type="Pivete7" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="442645258310580" type="Pivete1" />
+            </actions>
+            <sub-events>
+                <event-block sid="705946177483920">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="308336559170605" type="Pivete7">
+                            <param id="0" name="Object">Onda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="14" name="Set speed" sid="440037274118537" type="Pivete1">
+                            <param id="0" name="Speed">120</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="532747608907151">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="226423537980190" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="14" name="Set speed" sid="795690103198695" type="Pivete1">
+                            <param id="0" name="Speed">250</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="114416468678806">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="573237371394734" type="Pivete7" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="972148561000057" type="Pivete1">
+                    <param id="0" name="X">Pivete1.initialX</param>
+                    <param id="1" name="Y">Pivete1.initialY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="116719862391195">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="181933497281028" type="Pivete7">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="301156828162360" type="FadeGame">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="579027197550328" type="FadeGame" />
+                <action id="-2" name="Go to layout" sid="156377756144323" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

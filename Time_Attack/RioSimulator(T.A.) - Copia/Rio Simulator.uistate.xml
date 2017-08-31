@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Game</layout>
+        <layout order="2">GameOver</layout>
+        <layout order="4">Menu</layout>
+        <event-sheet active="1" order="1">Game Events</event-sheet>
+        <event-sheet order="3">GameOver</event-sheet>
+        <event-sheet order="5">Menu Events</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/StaminaBar/" />
+        <folder expanded="1" path="animation-folder/Pivete1/" />
+        <folder expanded="1" path="animation-folder/GuardaSol/" />
+        <folder expanded="1" path="animation-folder/GuardaSol2/" />
+        <folder expanded="1" path="animation-folder/Mulher/" />
+        <folder expanded="1" path="animation-folder/Prancha/" />
+        <folder expanded="1" path="animation-folder/Pivete2/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Lixeira/" />
+        <folder expanded="1" path="animation-folder/TimerBg/" />
+        <folder expanded="1" path="animation-folder/Reached/" />
+        <folder expanded="1" path="animation-folder/MenuBg/" />
+        <folder expanded="1" path="animation-folder/Fade/" />
+        <folder expanded="1" path="animation-folder/FadeGame/" />
+        <folder expanded="1" path="animation-folder/GameOver2/" />
+        <folder expanded="1" path="animation-folder/BT_GameOverRecom/" />
+        <folder expanded="1" path="animation-folder/BT_GameOverMENU/" />
+        <folder expanded="1" path="animation-folder/FadeGM/" />
+        <folder expanded="1" path="animation-folder/FadeTI/" />
+        <folder expanded="1" path="animation-folder/Pause/" />
+        <folder expanded="1" path="animation-folder/Menu/" />
+        <folder expanded="1" path="animation-folder/Restart/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/OndaSprite/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/coqueiro/" />
+        <folder expanded="1" path="animation-folder/Chuveiro/" />
+        <folder expanded="1" path="animation-folder/Volei/" />
+        <folder expanded="1" path="animation-folder/iphone_/" />
+        <folder expanded="1" path="animation-folder/Place/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/História/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Sprite10/" />
+        <folder expanded="1" path="animation-folder/BgMenuAntigo/" />
+        <folder expanded="1" path="animation-folder/Informacao/" />
+        <folder expanded="1" path="animation-folder/BT_Som/" />
+        <folder expanded="1" path="animation-folder/Skip/" />
+        <folder expanded="1" path="animation-folder/Sprite12/" />
+        <folder expanded="1" path="animation-folder/Pivete3/" />
+        <folder expanded="1" path="animation-folder/Pivete4/" />
+        <folder expanded="1" path="animation-folder/Pivete5/" />
+        <folder expanded="1" path="animation-folder/Pivete6/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/CangaA/" />
+        <folder expanded="1" path="animation-folder/CangaC/" />
+        <folder expanded="1" path="animation-folder/CangaB/" />
+        <folder expanded="1" path="animation-folder/SolL/" />
+        <folder expanded="1" path="animation-folder/SolR/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/figuranteplace1/" />
+        <folder expanded="1" path="animation-folder/figuranteplace2/" />
+        <folder expanded="1" path="animation-folder/Sprite15/" />
+        <folder expanded="1" path="animation-folder/figplace2/" />
+        <folder expanded="1" path="animation-folder/figplace3/" />
+        <folder expanded="1" path="animation-folder/FadeGo/" />
+        <folder expanded="1" path="animation-folder/Pivete7/" />
+    </folders-expanded>
+</c2uistate>

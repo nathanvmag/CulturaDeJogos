@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver</name>
+    <events>
+        <variable constant="0" name="Highscore" sid="697882893909801" static="0" type="number">0</variable>
+        <event-block sid="139563041838677">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="835782650928853" type="Keyboard">
+                    <param id="0" name="Key">77 (M)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="550155494838076" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="784871170400304" type="FadeGo">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="342171879521553" type="FadeGo" />
+                <action id="-16" name="Wait" sid="961897943123224" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="611800891857268" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="33" name="Stop all" sid="577751604515008" type="Audio" />
+                <action id="0" name="Play" sid="435660498816453" type="Audio">
+                    <param id="0" name="Audio file">Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">40</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="349418733784443">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="277659344756302" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="454979307841236" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="876982596571554" type="FadeGo">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="410798353396978" type="FadeGo" />
+                <action id="-16" name="Wait" sid="578404798673790" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="258243189787084" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+                <action id="33" name="Stop all" sid="842112358534614" type="Audio" />
+                <action id="0" name="Play" sid="495764789687201" type="Audio">
+                    <param id="0" name="Audio file">Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">40</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="201923133188169">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="249964937631018" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="827246921962654" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Score&quot;</param>
+                </action>
+                <action id="1" name="Get item" sid="125744894199085" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="400257295885293">
+            <conditions>
+                <condition id="1" name="On item get" sid="936653530148398" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Score&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="208330058844346" type="Score">
+                    <param id="0" name="Text">&quot;Score :&quot;&amp;LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="700042495069962">
+            <conditions>
+                <condition id="1" name="On item get" sid="503440603328739" type="LocalStorage">
+                    <param id="0" name="Key">&quot;high&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="860783928408099" type="SpriteFont">
+                    <param id="0" name="Text">&quot;HighScore : &quot;&amp; LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
