@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu Events</name>
+    <events>
+        <event-block sid="7068207502822879">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1404243860549575" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="4216948686197121" type="Fade">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="4314260432291469" type="Fade" />
+                <action id="-16" name="Wait" sid="2081882984941285" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="8599811457056581" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+                <action id="33" name="Stop all" sid="9326692655596437" type="Audio" />
+                <action id="0" name="Play" sid="2133699044489489" type="Audio">
+                    <param id="0" name="Audio file">Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="459681427594249">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="450701224622808" type="Sprite5" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="553414420416348" type="Sprite5">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="450007955931233" type="Sprite5" />
+            </actions>
+        </event-block>
+        <event-block sid="9611474634855413">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1129116691837759" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="6293575091141715" type="Audio">
+                    <param id="0" name="Audio file">Menu_-_GarotaDeIpanema</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set item" sid="396202134013446" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Score&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
