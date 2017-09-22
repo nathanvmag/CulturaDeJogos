@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GameOver2" uid="56">
+                <instance type="Sprite11" uid="115">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -39,14 +39,58 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>402.898986816</x>
-                        <y>245.897445679</y>
+                        <x>409</x>
+                        <y>177</y>
                         <z>0</z>
-                        <width>803</width>
-                        <height>490</height>
+                        <width>374.270294189</width>
+                        <height>333.431396484</height>
                         <depth>0</depth>
-                        <hotspotX>0.501742184</hotspotX>
-                        <hotspotY>0.501831532</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.488372087</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mdemenu" uid="116">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>409</x>
+                        <y>379</y>
+                        <z>0</z>
+                        <width>421</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503562927</hotspotX>
+                        <hotspotY>0.519999981</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="rderestart" uid="117">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>419</x>
+                        <y>429</y>
+                        <z>0</z>
+                        <width>513</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502923965</hotspotX>
+                        <hotspotY>0.519999981</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -56,11 +100,11 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Score : </text>
+                        <text></text>
                         <scale>1.4</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
@@ -72,11 +116,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>229</x>
-                        <y>401</y>
+                        <x>354.893676758</x>
+                        <y>157.359802246</y>
                         <z>0</z>
-                        <width>337</width>
-                        <height>30</height>
+                        <width>118.847473145</width>
+                        <height>47.005584717</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -89,11 +133,11 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>HighScore :</text>
+                        <text></text>
                         <scale>1.4</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
@@ -102,71 +146,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>229</x>
-                        <y>439</y>
+                        <x>349.809082031</x>
+                        <y>269.449645996</y>
                         <z>0</z>
-                        <width>384</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpriteFont3" uid="80">
-                    <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>R to Restart </text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>596</x>
-                        <y>276</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpriteFont4" uid="81">
-                    <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>M to Menu</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>597</x>
-                        <y>332</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
+                        <width>125.830749512</width>
+                        <height>45.555938721</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

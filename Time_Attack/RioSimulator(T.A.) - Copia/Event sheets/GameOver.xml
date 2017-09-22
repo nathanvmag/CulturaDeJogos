@@ -83,7 +83,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="208330058844346" type="Score">
-                    <param id="0" name="Text">&quot;Score :&quot;&amp;LocalStorage.ItemValue</param>
+                    <param id="0" name="Text">LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>
@@ -95,7 +95,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="860783928408099" type="SpriteFont">
-                    <param id="0" name="Text">&quot;HighScore : &quot;&amp; LocalStorage.ItemValue</param>
+                    <param id="0" name="Text"> LocalStorage.ItemValue</param>
                 </action>
             </actions>
         </event-block>

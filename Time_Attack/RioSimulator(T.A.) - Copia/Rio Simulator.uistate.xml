@@ -25,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
@@ -44,17 +44,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Lixeira/" />
         <folder expanded="1" path="animation-folder/TimerBg/" />
         <folder expanded="1" path="animation-folder/Reached/" />
-        <folder expanded="1" path="animation-folder/MenuBg/" />
         <folder expanded="1" path="animation-folder/Fade/" />
         <folder expanded="1" path="animation-folder/FadeGame/" />
         <folder expanded="1" path="animation-folder/GameOver2/" />
-        <folder expanded="1" path="animation-folder/BT_GameOverRecom/" />
-        <folder expanded="1" path="animation-folder/BT_GameOverMENU/" />
         <folder expanded="1" path="animation-folder/FadeGM/" />
         <folder expanded="1" path="animation-folder/FadeTI/" />
-        <folder expanded="1" path="animation-folder/Pause/" />
         <folder expanded="1" path="animation-folder/Menu/" />
-        <folder expanded="1" path="animation-folder/Restart/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
@@ -64,16 +59,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/coqueiro/" />
         <folder expanded="1" path="animation-folder/Chuveiro/" />
         <folder expanded="1" path="animation-folder/Volei/" />
-        <folder expanded="1" path="animation-folder/iphone_/" />
         <folder expanded="1" path="animation-folder/Place/" />
         <folder expanded="1" path="animation-folder/Sprite7/" />
         <folder expanded="1" path="animation-folder/Sprite8/" />
-        <folder expanded="1" path="animation-folder/História/" />
         <folder expanded="1" path="animation-folder/Sprite9/" />
         <folder expanded="1" path="animation-folder/Sprite10/" />
-        <folder expanded="1" path="animation-folder/BgMenuAntigo/" />
         <folder expanded="1" path="animation-folder/Informacao/" />
-        <folder expanded="1" path="animation-folder/BT_Som/" />
         <folder expanded="1" path="animation-folder/Skip/" />
         <folder expanded="1" path="animation-folder/Sprite12/" />
         <folder expanded="1" path="animation-folder/Pivete3/" />
@@ -94,5 +85,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/figplace3/" />
         <folder expanded="1" path="animation-folder/FadeGo/" />
         <folder expanded="1" path="animation-folder/Pivete7/" />
+        <folder expanded="1" path="animation-folder/BarreiraDePedra/" />
+        <folder expanded="1" path="animation-folder/BarreiraDePedras2/" />
+        <folder expanded="1" path="animation-folder/LetrasNaAreia/" />
+        <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/mdemenu/" />
+        <folder expanded="1" path="animation-folder/rderestart/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/Controles/" />
+        <folder expanded="1" path="animation-folder/Setas/" />
+        <folder expanded="1" path="animation-folder/mover/" />
+        <folder expanded="1" path="animation-folder/correrbt/" />
+        <folder expanded="1" path="animation-folder/correr/" />
+        <folder expanded="1" path="animation-folder/zbutton/" />
+        <folder expanded="1" path="animation-folder/Econder/" />
+        <folder expanded="1" path="animation-folder/Fundo/" />
     </folders-expanded>
 </c2uistate>
