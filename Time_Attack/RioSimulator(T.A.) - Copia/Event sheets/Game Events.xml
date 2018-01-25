@@ -193,7 +193,7 @@
                         <event-block sid="2631346498086073">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="5338009402239932" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
+                                    <param id="0" name="Key">90</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -232,7 +232,7 @@
                         <event-block sid="731283817264296">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="2437636279948569" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
+                                    <param id="0" name="Key">90</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="245640535476547" type="Player">
                                     <param id="0" name="Instance variable">EscondidoTime</param>
@@ -330,7 +330,7 @@
                 <event-block sid="433509892342534">
                     <conditions>
                         <condition id="2" name="Key is down" sid="177349960909802" type="Keyboard">
-                            <param id="0" name="Key">32 (Space)</param>
+                            <param id="0" name="Key">32</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -355,7 +355,7 @@
             <conditions>
                 <condition id="-22" name="Else" sid="731502335016367" type="System" />
                 <condition id="2" inverted="1" name="Key is down" sid="765200776374970" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                    <param id="0" name="Key">32</param>
                 </condition>
             </conditions>
             <actions>
@@ -516,7 +516,7 @@
         <event-block sid="7455059821231362">
             <conditions>
                 <condition id="3" name="On key released" sid="3051100925766091" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                    <param id="0" name="Key">32</param>
                 </condition>
             </conditions>
             <actions>
@@ -531,7 +531,7 @@
         <event-block sid="5498173672318341">
             <conditions>
                 <condition id="2" name="Key is down" sid="1244598105923845" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                    <param id="0" name="Key">32</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="1545335686273705" type="Player">
                     <param id="0" name="Instance variable">Stamina</param>
@@ -608,9 +608,6 @@
                 </action>
                 <action behavior="8Direction" id="4" name="Set max speed" sid="3006763799262952" type="Player">
                     <param id="0" name="Max Speed">200</param>
-                </action>
-                <action disabled="1" id="6" name="Set speed" sid="6025576901970972" type="Player">
-                    <param id="0" name="Speed">5</param>
                 </action>
             </actions>
         </event-block>
@@ -886,9 +883,6 @@
                     <param id="0" name="Instance variable">Speedtime</param>
                     <param id="1" name="Value">dt</param>
                 </action>
-                <action disabled="1" id="-20" name="Set layout scale" sid="231908201301929" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale,1.5,0.1)</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block sid="1472036819014857">
@@ -1015,6 +1009,9 @@
                     <param id="0" name="Fade-in time">1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="1496583301044749" type="FadeGame" />
+                <action id="6" name="Stop" sid="794557656273416" type="Audio">
+                    <param id="0" name="Tag">&quot;Respirando&quot;</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="186104371155561" type="System">
                     <param id="0" name="Layout">GameOver</param>
                 </action>
@@ -1031,6 +1028,9 @@
                     <param id="0" name="Fade-in time">1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="3174271635188335" type="FadeGame" />
+                <action id="6" name="Stop" sid="180239785266246" type="Audio">
+                    <param id="0" name="Tag">&quot;Respirando&quot;</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="187146057662244" type="System">
                     <param id="0" name="Layout">GameOver</param>
                 </action>
@@ -1238,6 +1238,9 @@
                     <param id="0" name="Fade-in time">1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="579027197550328" type="FadeGame" />
+                <action id="6" name="Stop" sid="502610077594386" type="Audio">
+                    <param id="0" name="Tag">&quot;Respirando&quot;</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="156377756144323" type="System">
                     <param id="0" name="Layout">GameOver</param>
                 </action>

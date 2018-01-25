@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.Serumaninhos.RioSimulator</app-id>
     <unique-id>1ndf5q4a23x1d</unique-id>
-    <saved-with-version>23900</saved-with-version>
+    <saved-with-version>25200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
